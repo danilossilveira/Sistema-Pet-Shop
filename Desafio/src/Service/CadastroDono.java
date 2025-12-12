@@ -9,7 +9,7 @@ public class CadastroDono {
     Scanner scan = new Scanner(System.in);
     ArrayList<Donos> listDono = new ArrayList<>();
 
-    public void cadastrodono() {
+    public Donos cadastrodono() {
         System.out.println("Nome do dono:");
         String nome = scan.nextLine();
         System.out.println("Número de telefone para contato:");
@@ -19,7 +19,8 @@ public class CadastroDono {
         String numer2 =numerodigitar.substring(7,11);
         String numero = "(" + ddd + ")" +numer1 + "-" + numer2;
         System.out.println("Cadastro realizado!");
-        System.out.println(numero);
-        listDono.add(new Donos(nome, numero));
+        Donos d = new Donos(nome, numero);
+        listDono.add(d);
+        return d;
     }
 }

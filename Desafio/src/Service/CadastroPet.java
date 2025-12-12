@@ -11,7 +11,7 @@ public class CadastroPet {
     Scanner scan = new Scanner(System.in);
     ArrayList<DadosGerais> listPet = new ArrayList<>();
 
-    public void cadastroPet() {
+    public Pets cadastroPet() {
 
         System.out.println("""
                 Qual é seu pet?
@@ -50,7 +50,9 @@ public class CadastroPet {
 
         System.out.println("Cadastro concluído!");
 
-        listPet.add(new Pets(especie, nome, idade, raca, porte));
+        Pets p = new Pets(especie, nome, idade, raca, porte);
+        listPet.add(p);
+        return p;
     }
 
 }
